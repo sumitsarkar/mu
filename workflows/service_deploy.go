@@ -257,6 +257,10 @@ func (workflow *serviceWorkflow) serviceEcsDeployer(service *common.Service, sta
 
 }
 
+func createTask(eventRuleArn string) {
+
+}
+
 func resolveServiceEnvironment(service *common.Service, environment string) {
 	for key, value := range service.Environment {
 		switch value.(type) {

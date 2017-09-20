@@ -1,0 +1,10 @@
+service:
+  name: mu
+  port: 8080
+
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: stelligent/mu

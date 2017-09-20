@@ -71,6 +71,11 @@ type Environment struct {
 	} `yaml:"vpcTarget,omitempty"`
 }
 
+type ScheduledTask struct {
+	Expression 		string				   `yaml:"expression,omitempty"`
+	Command			string				   `yaml:"command,omitempty"`
+}
+
 // Service defines the structure of the yml file for a service
 type Service struct {
 	Name            string                 `yaml:"name,omitempty"`
@@ -88,6 +93,9 @@ type Service struct {
 	Priority        int                    `yaml:"priority,omitempty"`
 	Pipeline        Pipeline               `yaml:"pipeline,omitempty"`
 	Database        Database               `yaml:"database,omitempty"`
+	Expression		string				   `yaml:"expression,omitempty"`
+	Command			string				   `yaml:"command,omitempty"`
+	ScheduledTask   ScheduledTask  		   `yaml:"scheduledTask,omitempty"`
 }
 
 // Database definition
