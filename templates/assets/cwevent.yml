@@ -1,0 +1,11 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Deploy CloudWatch Event
+Resources:
+  ECSScheduledEvent:
+    Type: AWS::Events::Rule
+    Properties:
+      Description:
+      EventPattern:
+      Name:
+      ScheduleExpression:

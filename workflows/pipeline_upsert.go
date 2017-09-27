@@ -45,6 +45,7 @@ func (workflow *pipelineWorkflow) pipelineBucket(stackUpserter common.StackUpser
 
 		log.Debugf("Waiting for stack '%s' to complete", bucketStackName)
 		stack := stackWaiter.AwaitFinalStatus(bucketStackName)
+
 		if stack == nil {
 			return fmt.Errorf("Unable to create stack %s", bucketStackName)
 		}
