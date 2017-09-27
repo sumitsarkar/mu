@@ -93,9 +93,7 @@ type Service struct {
 	Priority        int                    `yaml:"priority,omitempty"`
 	Pipeline        Pipeline               `yaml:"pipeline,omitempty"`
 	Database        Database               `yaml:"database,omitempty"`
-	Expression		string				   `yaml:"expression,omitempty"`
-	Command			string				   `yaml:"command,omitempty"`
-	ScheduledTask   ScheduledTask  		   `yaml:"scheduledTask,omitempty"`
+	ScheduledTasks   []ScheduledTask  	   `yaml:"scheduledTasks,omitempty"`
 }
 
 // Database definition

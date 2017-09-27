@@ -1,14 +1,13 @@
 package common
 
-// CWEventCreator for creating CloudWatch events
-type CWEventCreator interface {
-	CreateEvent()
-	DeleteEvent()
-	EditEvent()
-	PutTarget(event string, cluster string)
+import "github.com/aws/aws-sdk-go/service/cloudwatchevents"
+
+// CWPutEventTarget for creating CloudWatch events
+type CWPutEventTarget interface {
+	PutTarget(rule *string, clusters []*cloudwatchevents.Target)
 }
 
 // CWEventsManager composite of all events capabilities
 type CWEventsManager interface {
-	CWEventCreator
+	CWPutEventTarget
 }

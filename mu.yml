@@ -2,6 +2,11 @@ service:
   name: mu
   port: 8080
 
+  scheduledTasks:
+    - command: "mv file.txt"
+      expression: * * * 4 *
+    - command: "touch file.txt"
+      expression: 1 2 3 4 5
   pathPatterns:
   - /*
   pipeline:
