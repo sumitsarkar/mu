@@ -252,6 +252,8 @@ func (workflow *serviceWorkflow) serviceEcsDeployer(service *common.Service, sta
 			return fmt.Errorf("Ended in failed status %s %s", stack.Status, stack.StatusReason)
 		}
 
+
+
 		return nil
 	}
 
