@@ -17,6 +17,10 @@ TAG_VERSION = v$(VERSION)
 
 default: all
 
+via_container:
+	@echo "== running 'make all' from golang container =="
+	docker run --rm -v "${PWD}":/usr/src/myapp -w /usr/src/myapp golang make all
+
 deps:
 	@echo "=== preparing $(VERSION) from $(BRANCH) ==="
 	go get "github.com/jteeuwen/go-bindata/..."
